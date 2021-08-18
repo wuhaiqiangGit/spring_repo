@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 测试
+ */
 @Controller
 @RequestMapping("/test")
 public class TestController {
