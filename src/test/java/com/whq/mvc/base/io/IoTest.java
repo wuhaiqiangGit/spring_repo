@@ -249,7 +249,7 @@ public class IoTest {
         bufferedReader.close();
     }
 
-    /** 
+    /**
      * @Description: 测试缓冲字符流
      * @Author: whq
      * @Date: 2021/8/24 21:11
@@ -260,7 +260,7 @@ public class IoTest {
         Writer bufferedWriter = new BufferedWriter(new FileWriter(file), 2 * 2014);
         String out = "bufferedWriter";
         bufferedWriter.write(out);
-        
+
         bufferedWriter.flush();
         bufferedWriter.close();
     }
@@ -275,8 +275,8 @@ public class IoTest {
         File file = new File("D:/target/target.txt");
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         String line = null;
-        while (null != (line = bufferedReader.readLine())){
-            if ("exit".equals(line)){
+        while (null != (line = bufferedReader.readLine())) {
+            if ("exit".equals(line)) {
                 break;
             }
             System.out.println(line);
@@ -284,4 +284,19 @@ public class IoTest {
         bufferedReader.close();
     }
 
+    /** 
+     * @Description: 简单十、二、八十六进制转换方法 
+     * @Author: whq
+     * @Date: 2021/8/25 22:27
+     */
+    @Test
+    public void testBinary() {
+        System.out.println(Integer.toBinaryString('a')); //二进制
+        System.out.println(Integer.toOctalString('a')); //八进制
+        System.out.println(Integer.toHexString('a'));//十六进制
+
+        System.out.println(Integer.valueOf("1100001", 2).toString());    //二进制转十进制
+        System.out.println(Integer.valueOf("141", 8).toString());    //八进制转十进制
+        System.out.println(Integer.valueOf("61", 16).toString());    //十六进制转十进制
+    }
 }
