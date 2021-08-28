@@ -7,7 +7,7 @@ import org.junit.Test;
  * @Author: whq
  * @Date: 2021/8/24 16:23
  */
-public class BubbleSort {
+public class BubbleSortTest {
 
     @Test
     public void testSort() {
