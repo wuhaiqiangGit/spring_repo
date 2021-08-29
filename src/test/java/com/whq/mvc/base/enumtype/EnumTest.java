@@ -34,7 +34,7 @@ public class EnumTest {
     /** 
      * @Description: 测试switch 
      * @Author: whq
-     * @Date: 2021/8/29 10:47
+     * @Date: 2021/8/29 10:48
      */
     @Test
     public void testEnumSwitch() {
