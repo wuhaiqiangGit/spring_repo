@@ -3,7 +3,7 @@ package com.whq.mvc.base.enumtype;
 /** 
  * @Description: 星期枚举类 
  * @Author: whq
- * @Date: 2021/8/29 10:33
+ * @Date: 2021/8/29 10:39
  */
 public enum  WeekEnum {
     MONDAY("周一"),TUESDAY("周二"),WEDNESDAY("周三"),

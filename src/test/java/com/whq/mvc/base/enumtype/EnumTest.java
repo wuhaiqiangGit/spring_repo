@@ -23,11 +23,45 @@ public class EnumTest {
     public void testEnum() {
         WeekEnum monday = WeekEnum.MONDAY;
         WeekEnum friday = WeekEnum.FRIDAY;
-        System.out.printf("monday : %s\n",monday.name());
+        System.out.printf("monday : %s\n", monday.name());
         for (WeekEnum weekEnum : WeekEnum.values()) {
-            System.out.printf("%s:%s\n", weekEnum.name(),weekEnum.getData());
+            System.out.printf("%s:%s\n", weekEnum.name(), weekEnum.getData());
         }
 
-        System.out.printf("ordinal: %s\n",WeekEnum.valueOf("MONDAY"));
+        System.out.printf("ordinal: %s\n", WeekEnum.valueOf("MONDAY"));
+    }
+
+    /** 
+     * @Description: 测试switch 
+     * @Author: whq
+     * @Date: 2021/8/29 10:47
+     */
+    @Test
+    public void testEnumSwitch() {
+        WeekEnum weekEnum = WeekEnum.MONDAY;
+        switch (weekEnum) {
+            case MONDAY:
+                System.out.printf("%s\n", "周一");
+                break;
+            case TUESDAY:
+                System.out.printf("%s\n", "周二");
+                break;
+            case WEDNESDAY:
+                System.out.printf("%s\n", "周三");
+                break;
+            case THURSDAY:
+                System.out.printf("%s\n", "周四");
+                break;
+            case FRIDAY:
+                System.out.printf("%s\n","周五");
+                break;
+            case SATURDAY:
+                System.out.printf("%s\n","周六");
+                break;
+            case SUNDAY:
+                System.out.printf("%s\n","周日");
+                break;
+            default:
+        }
     }
 }
