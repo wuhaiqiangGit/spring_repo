@@ -1,16 +1,13 @@
 package com.whq.mvc.base.enumtype;
 
-import java.math.BigDecimal;
-
+/** 
+ * @Description: 星期枚举类 
+ * @Author: whq
+ * @Date: 2021/8/29 10:33
+ */
 public enum  WeekEnum {
-    MONDAY("周一"){
-        @Override
-        public double calculate(double v1, double v2) {
-            BigDecimal b1 = new BigDecimal(Double.toString(v1));
-            BigDecimal b2 = new BigDecimal(Double.toString(v2));
-            return b1.add(b2).doubleValue();
-        }
-    };
+    MONDAY("周一"),TUESDAY("周二"),WEDNESDAY("周三"),
+    THURSDAY("周四"),FRIDAY("周五"),SATURDAY("周六"),SUNDAY("周日");
 
     private String data;
 
@@ -25,6 +22,4 @@ public enum  WeekEnum {
     public void setData(String data) {
         this.data = data;
     }
-
-    public abstract double calculate(double v1,double v2);
 }
