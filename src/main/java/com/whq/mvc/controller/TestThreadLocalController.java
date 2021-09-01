@@ -8,16 +8,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 测试
+ * 测试threadLocal controller
  */
 @Controller
-@RequestMapping("/test")
-public class TestController {
+@RequestMapping("/threadLocal")
+public class TestThreadLocalController {
     private ThreadLocal<Integer> currentUser = ThreadLocal.withInitial(() -> null);
 
 
     @RequestMapping("/test01")
-    public void testController(@RequestParam("userId") Integer userId){
+    public void test01(@RequestParam("userId") Integer userId){
         String before = Thread.currentThread().getName() + ":"  + currentUser.get();
         currentUser.set(userId);
         Map map;
