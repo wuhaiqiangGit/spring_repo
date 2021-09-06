@@ -26,7 +26,6 @@ public class JedisTest {
     @Before
     public void init() {
         config = new JedisPoolConfig();
-        config = new JedisPoolConfig();
         config.setMaxIdle(8);
         config.setMaxTotal(18);
         jedisPool = new JedisPool(config, "192.168.1.108", 6379, 2000);
