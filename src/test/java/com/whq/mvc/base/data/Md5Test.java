@@ -47,7 +47,7 @@ public class Md5Test {
     @Test
     public void testMd5(){
         String md5Str = Md5Test.convertMd5("hello");
-        System.out.printf("%s\n%s\n",md5Str,md5Str.length());
+        System.out.printf("%s\n%d\n",md5Str,md5Str.length());
     }
 
     /**

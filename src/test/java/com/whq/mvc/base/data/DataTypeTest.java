@@ -3,6 +3,7 @@ package com.whq.mvc.base.data;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.util.Random;
 
 /**
  * @Description: 基本数据类型测试
@@ -92,6 +93,20 @@ public class DataTypeTest {
         System.out.printf("s1 == s9 %s\n", s1 == s9);   //  false   虽然s7和s8都是字符串，但是s9需要通过计算，只有在运行时才在堆里面计算出了结果，所以地址是未知的
         System.out.printf("s4 == s5 %s\n", s4 == s5);   //  false
         System.out.printf("s1 == s6 %s\n", s1 == s6);   //  true    intern后加入了常量池，所以相等
+    }
+
+    @Test
+    public void testInt() {
+        double i = 1.8d;
+        i = Math.round(i);
+        int j = (int) i;
+        System.out.printf("j= %s\n", j);
+
+        Random random = new Random(10);
+        for (int k = 0; k < 100; k++) {
+            int randomInt = random.nextInt(10) + 10;
+            System.out.printf("randomInt: %s\n", randomInt);
+        }
     }
 
 }

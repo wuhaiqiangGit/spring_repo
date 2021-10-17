@@ -34,4 +34,14 @@ public class OptionalTest {
         });
         System.out.printf("flatMapInteger: %s\n", flatMapInteger.get());
     }
+
+    @Test
+    public void testOptionalName() {
+        OptionalName optionalName = new OptionalName();
+        optionalName.setName("");
+        String result = Optional.of(optionalName).map(OptionalName::getName).map(String::trim).filter(x -> {
+            return !"".equals(x);
+        }).orElseThrow(() -> new RuntimeException("出错啦"));
+        System.out.printf("result: %s\n", result);
+    }
 }

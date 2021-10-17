@@ -65,4 +65,11 @@ public class StreamTest {
         Optional<Integer> count = list.stream().parallel().reduce((x, y) -> x + y);
         System.out.printf("count: %s\n", count.get());
     }
+
+    @Test
+    public void testAdd() {
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+        Optional count = list.stream().reduce(Integer::sum);
+        System.out.printf("count: %s\n", count.get());
+    }
 }

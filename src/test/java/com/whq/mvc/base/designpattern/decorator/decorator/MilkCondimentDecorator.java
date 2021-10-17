@@ -3,6 +3,8 @@ package com.whq.mvc.base.designpattern.decorator.decorator;
 
 import com.whq.mvc.base.designpattern.decorator.AbstractBeverage;
 
+import java.math.BigDecimal;
+
 /**
  * @Description: 牛奶装饰 
  * @Author: whq
@@ -25,6 +27,7 @@ public class MilkCondimentDecorator extends AbstractCondimentDecorator {
     public double cost() {
         //被装饰者原来的价格
         double oldCost = abstractBeverage.cost();
-        return oldCost + 0.1;
+        BigDecimal oldValue = new BigDecimal(Double.toString(oldCost));
+        return oldValue.add(new BigDecimal("0.1")).doubleValue();
     }
 }

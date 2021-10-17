@@ -284,8 +284,43 @@ public class IoTest {
         bufferedReader.close();
     }
 
-    /** 
-     * @Description: 简单十、二、八十六进制转换方法 
+    @Test
+    public void testStringReader() throws IOException {
+        StringReader sr = new StringReader("abcdefghijklmnopqrstuvwxy");
+        char[] result = new char[32];
+        int len;
+        while (-1 != (len = (sr.read(result)))) {
+            System.out.printf("%s\n", new String(result, 0, len));
+        }
+        sr.close();
+    }
+
+    @Test
+    public void testReadChinese() throws IOException {
+        FileInputStream fis = new FileInputStream("D://target/chinese.txt");
+        byte[] bytes = new byte[4];
+        int len;
+        while (-1 != (len = fis.read(bytes))) {
+            System.out.printf("%s\n", new String(bytes, 0, len, "UTF-8"));
+        }
+        fis.close();
+    }
+
+    @Test
+    public void testInputStreamReader() throws IOException {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader bufferedReader = new BufferedReader(isr);
+        String buffer = null;
+        while ((buffer = bufferedReader.readLine()) != null) {
+            if ("exit".equals(buffer)){
+                System.exit(1);
+            }
+            System.out.printf("输入： %s\n", buffer);
+        }
+    }
+
+    /**
+     * @Description: 简单十、二、八十六进制转换方法
      * @Author: whq
      * @Date: 2021/8/25 22:27
      */

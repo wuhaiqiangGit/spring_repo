@@ -11,7 +11,7 @@ public class SelectionSortTest {
 
     @Test
     public void testSort() {
-        int[] arrays = {1, 5, 2, 7, 9, 10, 6, 3, 8};
+        int[] arrays = {11, 5, 2, 7, 9, 10, 6, 3, 8};
         printArrays(arrays);
         for (int i = 0; i < arrays.length; i++) {
             int minIndex = i;
